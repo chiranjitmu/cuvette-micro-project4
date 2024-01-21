@@ -15,12 +15,12 @@ resetkey.addEventListener("click", () => {
 // delete
 deletekey.addEventListener("click", () => {
   let del = display.value;
-  if (del.length == "1") {
-    display.value = "";
-  } else {
-    let updatedvalue = del.substring(0, del.length - 1);
-    display.value = updatedvalue;
+  // if dot operator included in delete number then decimal to false
+  if (".".includes(display.value[del.length - 1])) {
+    decimal = false;
   }
+  let updatedvalue = del.substring(0, del.length - 1);
+  display.value = updatedvalue;
 });
 
 // keypress validate and display
