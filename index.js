@@ -55,6 +55,8 @@ keypressed.forEach((element) => {
         return;
       } else {
         display.value = eval(display.value);
+        decimal = false;
+        operator = false;
       }
     });
   });
