@@ -31,7 +31,7 @@ keypressed.forEach((element) => {
     if (value == "." && decimal) {
       return;
     }
-    if ("+-/*".includes(value)) {
+    if ("+-/x".includes(value)) {
       if (operator) {
         let presentvalue = display.value;
         let updatedvalue =
@@ -48,16 +48,17 @@ keypressed.forEach((element) => {
       }
     }
     display.value += value;
-
-    // addition
-    equalkey.addEventListener("click", () => {
-      if ("+-/*".includes(value)) {
-        return;
-      } else {
-        display.value = eval(display.value);
-        decimal = false;
-        operator = false;
-      }
-    });
   });
+});
+
+// addition
+equalkey.addEventListener("click", () => {
+  if ("+-/x".includes(display.value)) {
+    return;
+  } else {
+    formatedinput = display.value.replace("x", "*");
+    display.value = eval(formatedinput);
+    decimal = false;
+    operator = false;
+  }
 });
