@@ -11,7 +11,7 @@ Getting Started
 Clone the repository to your local machine:
 git clone https://github.com/chiranjitmu/cuvette-micro-project4.git
 
-Open the index.html file in your web browser to view the static web page.
+Open the index.html file in your web browser to view the dynamic web page.
 
 Acknowledgments
 
